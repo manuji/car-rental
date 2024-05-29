@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:3000/');
+    await page.goto('https://car-rental-ten.vercel.app/');
   });
 
 test('basic example test', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+  await page.goto('https://car-rental-ten.vercel.app/');
   await expect(page.locator('h1')).toContainText('Save big with our car rental');
 });
 
@@ -13,10 +13,10 @@ test('basic example test', async ({ page }) => {
 
 
 test('test2', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+  await page.goto('https://car-rental-ten.vercel.app/');
   await expect(page.getByRole('link', { name: 'logo-img' })).toBeVisible();
   await expect(page.locator('#home')).toContainText('Plan your trip now');
-  await expect(page.locator('h1')).toContainText('Save big with our cars rental');
+  await expect(page.locator('h1')).toContainText('Save big with our car rental');
   await expect(page.locator('#home')).toContainText('Rent the car of your dreams. Unbeatable prices, unlimited miles, flexible pick-up options and much more.');
   await expect(page.locator('#home')).toContainText('Book Ride');
   await expect(page.locator('#home')).toContainText('Learn More');
