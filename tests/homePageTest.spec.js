@@ -11,7 +11,7 @@ test('basic example test', async ({ page }) => {
 
 
 
-
+//tests for the home page - need to be updated
 test('test2', async ({ page }) => {
   await page.goto('https://car-rental-ten.vercel.app/');
   await expect(page.getByRole('link', { name: 'logo-img' })).toBeVisible();
